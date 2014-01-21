@@ -14,8 +14,11 @@ ZSH_THEME="robbyrussell"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable weekly auto-update checks
+# Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -23,8 +26,16 @@ ZSH_THEME="robbyrussell"
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -33,13 +44,15 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
+export LC_CTYPE=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 # Customize to your needs...
-[[ -s "$HOME/.rvm/script/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export JRUBY_OPTS=--1.9
-#export JRUBY_OPTS='-Xcext.enabled=true'
-export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/clojure/bin
-export TORQUEBOX_HOME=/home/yatish/.rvm/gems/jruby-1.7.3/gems/torquebox-server-2.3.0-java
-export JBOSS_HOME=/home/yatish/.rvm/gems/jruby-1.7.3/gems/torquebox-server-2.3.0-java/jboss
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-source ~/.bash_profile
+export PATH="/usr/local/bin:$PATH"
+export PATH="$PATH:/Users/yatish/.cask/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+## Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
