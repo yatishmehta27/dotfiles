@@ -22,7 +22,7 @@
     	br = branch
     	dc = diff --cached
 [user]
-        name = yatish27
+        name = Yatish Mehta
     	email = yatishmehta27@gmail.com
 [color]
         diff = auto
@@ -47,6 +47,8 @@
         added = yellow
         changed = green
         untracked = cyan
+[github]
+	user = yatish27
 
 [core]
         pager = less -FRSX
