@@ -39,4 +39,7 @@ MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 PATH=$PATH:/usr/local/heroku/bin
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
+
+. ~/.nvm/nvm.sh
