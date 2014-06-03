@@ -29,7 +29,7 @@ export RUBY_HEAP_FREE_MIN=500000
 
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Basic Path
 export PATH=$HOME/.rvm/gems/ruby-2.0.0-p353/bin:$HOME/.rvm/gems/ruby-2.0.0-p353@global/bin:$HOME/.rvm/rubies/ruby-2.0.0-p353/bin:$HOME/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$HOME/.cask/bin:$HOME/.cask/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin:/usr/local/mysql/bin
@@ -52,7 +52,8 @@ PATH=$PATH:/usr/local/heroku/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 
-if [[$OSTYPE == "darwin"*]] then;
+if [[ "$OSTYPE" =~ ^darwin ]]
+then
     PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-fi 
+fi
