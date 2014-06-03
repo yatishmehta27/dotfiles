@@ -1,0 +1,16 @@
+# be nice
+alias please=sudo
+
+# `cat` with beautiful colors. requires Pygments installed.
+# sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+

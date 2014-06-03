@@ -5,5 +5,6 @@ cp ./irbrc ~/.irbrc
 cp ./zshrc ~/.zshrc
 cp ./pryrc ~/.pryrc
 cp ./gemrc ~/.gemrc
-echo "Copied gitconfig irbrc gemrc pryrc"
+cp ./aliases ~/.aliases
+echo "Copied gitconfig zshrc irbrc gemrc pryrc aliases"
 
