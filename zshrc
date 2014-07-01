@@ -21,7 +21,7 @@ export LANGUAGE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 #Ruby constants
-export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_GC_HEAP_INIT_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
@@ -52,8 +52,26 @@ PATH=$PATH:/usr/local/heroku/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+
 if [[ "$OSTYPE" =~ ^darwin ]]
 then
     PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
     alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 fi
+
+# be nice
+alias please=sudo
+
+# `cat` with beautiful colors. requires Pygments installed.
+# sudo easy_install Pygments
+alias c='pygmentize -O style=monokai -f console256 -g'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
