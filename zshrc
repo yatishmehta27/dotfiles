@@ -35,9 +35,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Basic Path
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 PATH=$PATH:/usr/local/heroku/bin
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 
@@ -47,7 +48,9 @@ export GOPATH=$HOME/go
 if [[ "$OSTYPE" =~ ^darwin ]]
 then
     PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+    alias es='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
+    alias emacs='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
+    export EDITOR='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
 fi
 
 # be nice
