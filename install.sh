@@ -6,4 +6,6 @@ cp ./zshrc ~/.zshrc
 cp ./pryrc ~/.pryrc
 cp ./gemrc ~/.gemrc
 cp ./rspec ~/.rspec
-echo "Copied gitconfig zshrc irbrc gemrc pryrc aliases"
+cp ./vimrc ~/.vimrc
+cp ./vimrc.bundle ~/.vimrc.bundle
+echo "Copied gitconfig zshrc irbrc gemrc pryrc aliases vimrc"
