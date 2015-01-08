@@ -6,9 +6,9 @@ DISABLE_AUTO_TITLE=true
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="apple"
+ZSH_THEME="robbyrussell"
 
-plugins=(osx rails ruby git npm zsh-syntax-highlighting)
+plugins=(osx rails ruby git npm pylint python web-search zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # source extra files
@@ -26,11 +26,7 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
-
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Basic Path
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
@@ -38,7 +34,6 @@ PATH=$PATH:/usr/local/heroku/bin
 
 PATH=/usr/lib/jvm/java-7-openjdk-i386/bin:$PATH
 [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 
@@ -48,14 +43,11 @@ export GOPATH=$HOME/go
 if [[ "$OSTYPE" =~ ^darwin ]]
 then
     PATH=/Applications/Postgres93.app/Contents/MacOS/bin:$PATH
-    alias es='/Applications/Emacs.app/Contents/MacOS/Emacs --daemon'
-    alias emacs='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -n'
-    export EDITOR='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c'
 fi
-
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home
 # be nice
 alias please=sudo
-
+alias python='python3'
 # `cat` with beautiful colors. requires Pygments installed.
 # sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
@@ -67,3 +59,5 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
