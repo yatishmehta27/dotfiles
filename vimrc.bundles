@@ -21,12 +21,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'godlygeek/tabular'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'wincent/command-t'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'slim-template/vim-slim.git'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-fugitive'
 
 " Golang
 Plugin 'fatih/vim-go'
@@ -35,6 +29,7 @@ Plugin 'nsf/gocode'
 
 " autocomplete
 Plugin 'Valloric/YouCompleteMe'
+
 " Python 
 " Plugin 'nvie/vim-flake8'
 Plugin 'davidhalter/jedi-vim'
