@@ -1,4 +1,4 @@
-%w{rubygems wirble pp irb/ext/save-history ap}.each do |lib| 
+%w{rubygems irb/ext/save-history}.each do |lib| 
   begin 
     require lib 
   rescue LoadError => err
