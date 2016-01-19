@@ -47,7 +47,6 @@ fi
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home
 # be nice
 alias please=sudo
-alias python='python3'
 # `cat` with beautiful colors. requires Pygments installed.
 # sudo easy_install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'
@@ -61,3 +60,11 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias whois="whois -h whois-servers.net"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:/usr/local/mysql/bin"
+NPM_PACKAGES=/Users/yatish/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
+
+MYSQL=/usr/local/mysql/bin
+export PATH=$PATH:$MYSQL
+export DLYD_LIBRARY_PATH=/usr/local/mysql/lib
